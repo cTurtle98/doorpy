@@ -47,12 +47,14 @@
 			</a><br>
 		<br>
 		</div>
-            <div id="message" class="">
+            <div id="message" class="{% block message-type %}{% endblock %}">
 			<br>
 			<span id="title">
+				{% block title %}{% endblock %}
 			</span>
 			<br><br>
 			<span id="status">
+				{% block status %}{% endblock %}
 			</span>
 			<br>
 			<br>

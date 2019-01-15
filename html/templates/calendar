@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block message-type %}
+## home away do-not-disturb
+away
+{% endblock %}
+{% block title %}
+Calendar
+{% endblock %}
+{% block status %}
+##insert google calndar iframe
+
+{% endblock %}

@@ -5,6 +5,10 @@ this program uses python flask to host the sign on my door
 """
 
 from flask import Flask, render_template, request
+import json
+
+with open("cards.json") as f:
+    cardsdict = json.load(f)
 
 app = Flask(__name__, template_folder='html/templates/')
 

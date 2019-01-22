@@ -1,8 +1,8 @@
 {
         "default" : {
-            "template" : "basicmessage.html"
-            "messageType" : "do-not-disturb"
-            "messageSubject" : "Scan Card"
+            "template" : "basicmessage.html",
+            "messageType" : "do-not-disturb",
+            "messageSubject" : "Scan Card",
             "messageStatus" : "Please scan a card to display a message!"
         },
         "home" : {

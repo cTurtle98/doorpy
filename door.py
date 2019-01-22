@@ -44,7 +44,7 @@ app = Flask(__name__, template_folder='html/templates/')
 
 @app.route('/')
 def index() :
-'''this is the main route that the kiosk pi will be looking at'''
+    '''this is the main route that the kiosk pi will be looking at'''
     
     #retrieve cardnum from html form
     cardnum = request.args.get('card')
@@ -66,7 +66,7 @@ def index() :
     
 @app.route('/edit')
 def edit() :
-''' this is a route for registering new cards and messages, must be accessed remotely'''
+    ''' this is a route for registering new cards and messages, must be accessed remotely'''
 
     return abort(404)
 

@@ -30,7 +30,7 @@ def index() :
         print("DEBUG: cardnum type = ", type(cardnum))
         
     
-    if cardnum == "None":
+    if str(cardnum) == str("None"):
         return render_template('pleasescan.html',)
     
     elif cardsdict[cardnum]['active'] == 'A':

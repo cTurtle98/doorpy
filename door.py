@@ -50,7 +50,7 @@ def index() :
         
     
     if cardnum == None:
-        return render_template(messagesdict[default][template], )
+        return render_template(messagesdict["default"]["template"], **messagesdict["default"])
     
     try:
         if cardsdict[cardnum]['active'] == 'A':

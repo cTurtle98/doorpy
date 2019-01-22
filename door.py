@@ -17,9 +17,12 @@ try:
         cardsdict = json.load(f)
 except:
     cardsdict = []
-
-if DEBUG:
-    print(cardsdict)
+    
+try:
+    with open("messages.json") as f:
+        messagesdict = json.load(f)
+except:
+    messagesdict = []
 
 app = Flask(__name__, template_folder='html/templates/')
 

@@ -1,20 +1,20 @@
 {
-        "default" : {
+    "default" : {
             "template" : "basicmessage.html",
             "messageType" : "do-not-disturb",
             "messageSubject" : "Scan Card",
             "messageStatus" : "Please scan a card to display a message!"
-        },
-        "home" : {
+    },
+    "home" : {
             "template" : "basicmessage.html",
             "messageType" : "home",
             "messageSubject" : "Home!",
             "messageStatus" : "Enter at your own risk!"
-        },
-        "away" : {
+      },
+      "away" : {
             "template" : "calendar.html",
             "messageType" : "away",
             "messageSubject" : "Away!",
             "messageStatus" : "see calendar"
-        },
-    }
+      },
+}

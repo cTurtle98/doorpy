@@ -7,8 +7,6 @@ this program uses python flask to host the sign on my door
 from flask import Flask, render_template, request
 import json
 
-#flask in debug mode
-export FLASK_ENV=development
 #enable personal debug messages
 DEBUG = True
 
@@ -20,8 +18,9 @@ except:
 
 if DEBUG:
     print(cardsdict)
-    
-app = Flask(__name__, template_folder='html/templates/')
+
+# WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER
+app = Flask(__name__, debug=True, template_folder='html/templates/')
 
 @app.route('/')
 def index() :

@@ -18,7 +18,7 @@ try:
 except:
     #MINIMAL DICTS FOR TESTING
     cardsdict = {
-        12345{
+        12345 {
             "A" : "home"
             "B" : "away"
             "active" : "A"
@@ -31,13 +31,13 @@ try:
 except:
     #MINIMAL DICTS FOR TESTING
     messagesdict = {
-        home{
+        home {
             "template" : "basicmessage.html"
             "messageType" : "home"
             "title" : "Home!"
             "status" : "Enter at your own risk!"
         }
-        away{
+        away {
             "template" : "calendar.html"
             "messageType" : "away"
             "title" : "Away!"

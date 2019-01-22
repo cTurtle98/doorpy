@@ -41,7 +41,7 @@ def index() :
     try:
         if cardsdict[cardnum]['active'] == 'A':
             cardsdict[cardnum]['active'] = 'B'
-            return render_template(cardsdict[cardnum]['B'],)
+            return render_template(messagesdict[cardsdict[cardnum]['B']]['template'], messagesdict[cardsdict[cardnum]['B']]['type'], messagesdict[cardsdict[cardnum]['B']]['title'], messagesdict[cardsdict[cardnum]['B']]['message'])
     
         elif cardsdict[cardnum][active] == 'B':
             cardsdict[cardnum][active] = 'A'

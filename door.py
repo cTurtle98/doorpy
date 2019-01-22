@@ -36,7 +36,7 @@ try:
     messagesdict = json.load(f)
     f.close()
 except:
-    messagedict = []
+    messagedict = {}
     print("ERROR! Could not load messages dictionary!")
 
 app = Flask(__name__, template_folder='html/templates/')

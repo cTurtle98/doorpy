@@ -35,15 +35,15 @@ def index() :
     if str(cardnum) == str("None"):
         return render_template('pleasescan.html',)
     
-    elif cardsdict[cardnum]['active'] == 'A':
-        cardsdict[cardnum]['active'] = 'B'
-        return render_template(cardsdict[cardnum]['B'],)
+    try:
+        if cardsdict[cardnum]['active'] == 'A':
+            cardsdict[cardnum]['active'] = 'B'
+            return render_template(cardsdict[cardnum]['B'],)
     
-    elif cardsdict[cardnum][active] == 'B':
-        cardsdict[cardnum][active] = 'A'
-        return render_template(cardsdict[cardnum]['A'],)
-    
-    else:
+        elif cardsdict[cardnum][active] == 'B':
+            cardsdict[cardnum][active] = 'A'
+            return render_template(cardsdict[cardnum]['A'],)
+    except:
         return render_template('cardnotfound.html',)
     
 @app.route('/edit')

@@ -32,8 +32,9 @@ except:
 ## END BAD CODE BLOCK
 
 try:
-    with open("messages.json") as f:
-        messagesdict = json.load(f)
+    f = open("messages.json")
+    messagesdict = json.load(f)
+    f.close()
 except:
     print("ERROR! Could not load messages dictionary!")
 

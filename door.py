@@ -48,7 +48,7 @@ def index() :
         print("DEBUG: cardnum type = ", type(cardnum))
         
     
-    if str(cardnum) == str("None"):
+    if cardnum == None:
         return render_template(messagesdict[default][template], )
     
     try:

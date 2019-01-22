@@ -21,10 +21,10 @@
 	        background-color: green;
 	        color: yellow;
         }
-        #title {
+        #messageTitle {
 	        font-size: 60pt;
         }
-        #status {
+        #MessageStatus {
         	font-size: 48pt;
         }
         .home {
@@ -50,14 +50,14 @@
 	    <form method="get">
 		    <input type="text" id="card" autofocus>
 	    </form>
-            <div id="message" class="{% block messageType %}{% endblock %}">
+            <div id="message" class="{% block messageTypeBlock %}{% endblock %}">
 			<br>
-			<span id="title">
-				{% block title %}{% endblock %}
+			<span id="messageTitle">
+				{% block messageTitleBlock %}{% endblock %}
 			</span>
 			<br><br>
-			<span id="status">
-				{% block status %}{% endblock %}
+			<span id="messageStatus">
+				{% block messageStatusBlock %}{% endblock %}
 			</span>
 			<br>
 			<br>

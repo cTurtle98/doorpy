@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block messageType %}
+{% block messageTypeBlock %}
 ## home away do-not-disturb
-    {% messageType %}
+    {{ messageType }}
 {% endblock %}
-{% block title %}
-    {% title %}
+{% block messageSubjectBlock %}
+    {{ messageSubject }}
 {% endblock %}
-{% block status %}
-    {% status %}
+{% block messageStatusBlock %}
+    {{ messageStatus }}
 {% endblock %}

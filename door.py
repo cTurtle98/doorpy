@@ -50,7 +50,7 @@ def index() :
 def edit() :
     mypath = "html/templates/"
     files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    files.pop("base.html")
+    files.remove("base.html")
     
     if DEBUG:
         print(files)

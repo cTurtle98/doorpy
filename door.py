@@ -36,7 +36,7 @@ except:
             "messageType" : "home",
             "title" : "Home!",
             "status" : "Enter at your own risk!"
-        }
+        },
         away : {
             "template" : "calendar.html",
             "messageType" : "away",

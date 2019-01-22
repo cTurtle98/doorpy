@@ -58,8 +58,8 @@ def index() :
         if cardsdict[cardnum]['active'] == 'A':
             cardsdict[cardnum]['active'] = 'B'
             return render_template(messagesdict[cardsdict[cardnum]['B']]['template'], **messagesdict[cardsdict[cardnum]['B']])    
-        elif cardsdict[cardnum][active] == 'B':
-            cardsdict[cardnum][active] = 'A'
+        elif cardsdict[cardnum]['active'] == 'B':
+            cardsdict[cardnum]['active'] = 'A'
             return render_template(cardsdict[cardnum]['A'],)
     except:
         return render_template(messagesdict["cardnotfound"]["template"], **messagesdict["cardnotfound"])

@@ -18,11 +18,11 @@ try:
 except:
     #MINIMAL DICTS FOR TESTING
     cardsdict = {
-        12345 : {
+        "12345" : {
             "A" : "home",
             "B" : "away",
             "active" : "A"
-        }
+        },
     }
     
 try:
@@ -42,7 +42,7 @@ except:
             "messageType" : "away",
             "title" : "Away!",
             "status" : "see calendar"
-        }
+        },
     }
 
 app = Flask(__name__, template_folder='html/templates/')

@@ -1,15 +1,10 @@
 {
         "default" : {
-              # jinja template to use to render message
             "template" : "basicmessage.html"
-            # message type for css
             "messageType" : "do-not-disturb"
-            # big 3 words max subject
             "messageSubject" : "Scan Card"
-            # longer message with more details
             "messageStatus" : "Please scan a card to display a message!"
         },
-        # home message
         "home" : {
             "template" : "basicmessage.html",
             "messageType" : "home",

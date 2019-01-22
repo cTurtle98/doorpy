@@ -4,10 +4,13 @@ pydoor python program
 this program uses python flask to host the sign on my door
 """
 
-DEBUG = True
-
 from flask import Flask, render_template, request
 import json
+
+#flask in debug mode
+export FLASK_ENV=development
+#enable personal debug messages
+DEBUG = True
 
 try:
     with open("cards.json") as f:

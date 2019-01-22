@@ -19,8 +19,7 @@ except:
 if DEBUG:
     print(cardsdict)
 
-# WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER
-app = Flask(__name__, debug=True, template_folder='html/templates/')
+app = Flask(__name__, template_folder='html/templates/')
 
 @app.route('/')
 def index() :
@@ -45,4 +44,5 @@ def index() :
     
 
 if __name__ == '__main__' :
-    app.run(host='::', port=80)
+    # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER
+    app.run(debug=True, host='::', port=80)

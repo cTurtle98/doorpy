@@ -5,6 +5,12 @@
             "messageSubject" : "Scan Card",
             "messageStatus" : "Please scan a card to display a message!"
     },
+    "cardnotfound" : {
+            "template" : "basicmessage.html",
+            "messageType" : "do-not-disturb",
+            "messageSubject" : "Card Not Found",
+            "messageStatus" : "That card does not exist in my database, please scan another"
+    },
     "home" : {
             "template" : "basicmessage.html",
             "messageType" : "home",

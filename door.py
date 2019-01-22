@@ -26,7 +26,9 @@ def index() :
     cardnum = request.args.get('card')
     
     if DEBUG:
-        print(cardnum)
+        print("DEBUG: cardnum = ", cardnum)
+        print("DEBUG: cardnum type = ", type(cardnum))
+        
     
     if cardnum == "None":
         return render_template('pleasescan.html',)

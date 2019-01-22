@@ -16,13 +16,34 @@ try:
     with open("cards.json") as f:
         cardsdict = json.load(f)
 except:
-    cardsdict = []
+    #MINIMAL DICTS FOR TESTING
+    cardsdict = {
+        12345{
+            "A" : "home"
+            "B" : "away"
+            "active" : "A"
+        }
+    }
     
 try:
     with open("messages.json") as f:
         messagesdict = json.load(f)
 except:
-    messagesdict = []
+    #MINIMAL DICTS FOR TESTING
+    messagesdict = {
+        home{
+            "template" : "basicmessage.html"
+            "messageType" : "home"
+            "title" : "Home!"
+            "status" : "Enter at your own risk!"
+        }
+        away{
+            "template" : "calendar.html"
+            "messageType" : "away"
+            "title" : "Away!"
+            "status" : "see calendar"
+        }
+    }
 
 app = Flask(__name__, template_folder='html/templates/')
 

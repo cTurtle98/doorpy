@@ -26,7 +26,7 @@ except:
             "B" : "away",
             #was last seen message primary or secondary
             "active" : "A"
-        },
+        }
     }
 ## END BAD CODE BLOCK
 
@@ -62,7 +62,7 @@ def index() :
             cardsdict[cardnum][active] = 'A'
             return render_template(cardsdict[cardnum]['A'],)
     except:
-        return render_template('cardnotfound.html',)
+        return render_template(messagesdict["cardnotfound"]["template"], **messagesdict["cardnotfound"])
     
 @app.route('/edit')
 def edit() :

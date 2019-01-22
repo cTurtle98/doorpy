@@ -6,6 +6,8 @@ this program uses python flask to host the sign on my door
 
 from flask import Flask, render_template, request
 import json
+from os import listdir
+from os.path import isfile, join
 
 #enable personal debug messages
 DEBUG = True
@@ -43,6 +45,15 @@ def index() :
     
     else:
         return render_template('cardnotfound.html',)
+    
+@app.route('/edit')
+def edit() :
+    mypath = "html/templates/"
+    files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    
+    if DEBUG:
+        print(files)
+        
     
 
 if __name__ == '__main__' :

@@ -31,13 +31,13 @@ try:
 except:
     #MINIMAL DICTS FOR TESTING
     messagesdict = {
-        home : {
+        "home" : {
             "template" : "basicmessage.html",
             "messageType" : "home",
             "title" : "Home!",
             "status" : "Enter at your own risk!"
         },
-        away : {
+        "away" : {
             "template" : "calendar.html",
             "messageType" : "away",
             "title" : "Away!",

@@ -1,0 +1,21 @@
+Too much to talk about in a single commit message, so I'm placing it here.
+
+[Sample JSON]
+Added a sample cards.json file to test with. Reading from JSON returns a dictionary, and kwargs can be passed to Jinja2 forms as a key:value pair (a dictionary!). 
+The code grabs the appropriate sub-dictionary based on the card value input and passes that into the render_template() function. 
+	(currently strings, but should be whatever value the reader will enter into the form. Update the JSON to match)
+
+[dictionary to Jinja2 variables]
+This means that the keys are available as Jinja2 variable names.
+So the {"title" : "AnAlert", ..., ..., } in the JSON gives Jinja2 the variable {{title}} along with all the others in the JSON.
+The only trick will be remembering them by name when you build the templates with the {{vars}} for Jinja2.
+
+[Templates in Shambles]
+Speaking of which, the templates are a bit of a mess. I don't know how to write them correctly, and their inheritence really 
+doens't like the name collisions. I managed to get the title to set, though! I may or may not have clobbered the previous
+static title while doing so...
+
+[Some other Cleanup]
+Check the door.py file for some #TODO:s. I've hard-coded the cardnumber value because I can't be bothered to retrieve the
+form value correctly right now.
+Also fix the form value retreival. It doesn't seem to work at all.

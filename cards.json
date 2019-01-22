@@ -1,0 +1,24 @@
+{
+	"default": {
+		"template" : "pleasescan.html",
+		"title" : "Swipe Prompt",
+		"status" : "Please Swipe Card to Show Signage"
+	},
+	"card1" : {
+		"template" : "basicmessage.html",
+		"title" : "AtHomeAlert",
+		"status" : "Currently at Home",
+		"bgcolor" : "0x65FF65"
+	},
+	"card2" : {
+		"template" : "basicmessage.html",
+		"title" : "AtWorkAlert",
+		"status" : "Currently at Work",
+		"bgcolor" : "0x454545"
+	},
+	"card3" : {
+		"template" : "calendar.html",
+		"title" : "The Calendar",
+		"status" : ""
+	}
+}

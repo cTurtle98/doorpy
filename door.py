@@ -18,9 +18,13 @@ try:
 except:
     #MINIMAL DICTS FOR TESTING
     cardsdict = {
+        #card number 12345
         "12345" : {
+            #primary message
             "A" : "home",
+            #secondary message
             "B" : "away",
+            #was last seen message primary or secondary
             "active" : "A"
         },
     }
@@ -31,10 +35,15 @@ try:
 except:
     #MINIMAL DICTS FOR TESTING
     messagesdict = {
+        # home message
         "home" : {
+            # jinja template to use to render message
             "template" : "basicmessage.html",
+            # message type for css
             "messageType" : "home",
+            # title for message
             "title" : "Home!",
+            # status for message
             "status" : "Enter at your own risk!"
         },
         "away" : {

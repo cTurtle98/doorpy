@@ -33,26 +33,6 @@ try:
     with open("messages.json") as f:
         messagesdict = json.load(f)
 except:
-    #MINIMAL DICTS FOR TESTING
-    messagesdict = {
-        # home message
-        "home" : {
-            # jinja template to use to render message
-            "template" : "basicmessage.html",
-            # message type for css
-            "messageType" : "home",
-            # title for message
-            "title" : "Home!",
-            # status for message
-            "status" : "Enter at your own risk!"
-        },
-        "away" : {
-            "template" : "calendar.html",
-            "messageType" : "away",
-            "title" : "Away!",
-            "status" : "see calendar"
-        },
-    }
 
 app = Flask(__name__, template_folder='html/templates/')
 
@@ -66,7 +46,7 @@ def index() :
         
     
     if str(cardnum) == str("None"):
-        return render_template('pleasescan.html',)
+        return render_template(messagesdict[default][template], )
     
     try:
         if cardsdict[cardnum]['active'] == 'A':

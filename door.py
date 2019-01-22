@@ -54,7 +54,7 @@ def edit() :
     if DEBUG:
         print(files)
         
-    return files
+    return str(files)
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

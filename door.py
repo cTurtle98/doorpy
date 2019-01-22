@@ -52,6 +52,8 @@ def index() :
         
     
     if cardnum == None:
+        if DEBUG:
+            print("DEBUG: messagesdict default", messagesdict["default"]["template"])
         return render_template(messagesdict["default"]["template"], **messagesdict["default"])
     
     try:

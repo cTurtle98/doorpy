@@ -19,8 +19,8 @@ except:
     #MINIMAL DICTS FOR TESTING
     cardsdict = {
         12345 : {
-            "A" : "home"
-            "B" : "away"
+            "A" : "home",
+            "B" : "away",
             "active" : "A"
         }
     }
@@ -32,15 +32,15 @@ except:
     #MINIMAL DICTS FOR TESTING
     messagesdict = {
         home : {
-            "template" : "basicmessage.html"
-            "messageType" : "home"
-            "title" : "Home!"
+            "template" : "basicmessage.html",
+            "messageType" : "home",
+            "title" : "Home!",
             "status" : "Enter at your own risk!"
         }
         away : {
-            "template" : "calendar.html"
-            "messageType" : "away"
-            "title" : "Away!"
+            "template" : "calendar.html",
+            "messageType" : "away",
+            "title" : "Away!",
             "status" : "see calendar"
         }
     }

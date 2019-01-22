@@ -51,6 +51,7 @@ def edit() :
     mypath = "html/templates/"
     files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     files.remove("base.html")
+    files.remove('template.html')
     
     if DEBUG:
         print(files)

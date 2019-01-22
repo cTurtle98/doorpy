@@ -12,6 +12,7 @@ from os.path import isfile, join
 #enable personal debug messages
 DEBUG = True
 
+## THIS BLOCK OF CODE IS BAD AND NEEDS TO BE GONE
 try:
     with open("cards.json") as f:
         cardsdict = json.load(f)
@@ -28,11 +29,13 @@ except:
             "active" : "A"
         },
     }
-    
+## END BAD CODE BLOCK
+
 try:
     with open("messages.json") as f:
         messagesdict = json.load(f)
 except:
+    print("ERROR! Could not load messages dictionary!")
 
 app = Flask(__name__, template_folder='html/templates/')
 

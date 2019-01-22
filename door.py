@@ -15,14 +15,14 @@ app = Flask(__name__, template_folder='html/templates/')
 @app.route('/')
 def index() :
     cardnum = request.args.get('card')
-    if cardnum = "None":
+    if cardnum == "None":
         return render_template('pleasescan.html',)
     
-    elif cardsdict[cardnum]['active'] = 'A':
+    elif cardsdict[cardnum]['active'] == 'A':
         cardsdict[cardnum]['active'] = 'B'
         return render_template(cardsdict[cardnum]['B'],)
     
-    elif cardsdict[cardnum][active] = 'B':
+    elif cardsdict[cardnum][active] == 'B':
         cardsdict[cardnum][active] = 'A'
         return render_template(cardsdict[cardnum]['A'],)
     

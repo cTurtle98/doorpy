@@ -67,8 +67,15 @@ def index() :
 @app.route('/edit', methods=['GET'])
 def edit() :
     ''' remote edit page for messages and cards'''
-
-    return render_template('edit.html', cardkeys=cardsdict.keys(), messagekeys=messagesdict.keys(), carditems=cardsdict.items(), messageitems=messagesdict.items())
+    
+    
+    
+    return render_template(
+        'edit.html',
+        cardkeys=cardsdict.keys(),
+        messagekeys=messagesdict.keys(),
+        
+    )
 
 @app.route('/editcard', methods=['POST'])
 def editcard() :

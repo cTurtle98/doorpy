@@ -82,12 +82,21 @@ def edit() :
 @app.route('/editcard', methods=['POST'])
 def editcard() :
     
+    
     print('hello')
 
 @app.route('/editmessage', methods=['POST'])
 def editmessage() :
     
-    print('hello')
+    cardsdict[request.form.get('messageName')] = {
+        "template" : request.form.get('messageTemplate'),
+        "messageType" : request.form.get('messageType'),
+        "messageSubject" : request.form.get('messageSubject'),
+        "messageStatus" : request.form.get('messageStatus')
+    }
+    
+    with open('messages.json', 'w') as f:
+        json.dump(cardsdict, f)
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

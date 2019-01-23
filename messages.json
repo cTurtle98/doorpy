@@ -6,9 +6,9 @@
         "messageType": "away"
     },
     "test": {
-        "messageSubject": "test1",
+        "messageSubject": "blarg",
         "template": "basicmessage.html",
-        "messageStatus": "test1",
+        "messageStatus": "blart",
         "messageType": "home"
     },
     "home": {

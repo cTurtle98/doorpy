@@ -1,0 +1,12 @@
+{
+    "": {
+        "B": "test",
+        "A": "test",
+        "active": "A"
+    },
+    "12345": {
+        "B": "away",
+        "A": "home",
+        "active": "A"
+    }
+}

@@ -97,6 +97,8 @@ def editmessage() :
     
     with open('messages.json', 'w') as f:
         json.dump(cardsdict, f)
+    
+    return abort(200)
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

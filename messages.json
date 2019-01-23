@@ -1,26 +1,32 @@
 {
-    "default" : {
-            "template" : "basicmessage.html",
-            "messageType" : "do-not-disturb",
-            "messageSubject" : "Scan Card",
-            "messageStatus" : "Please scan a card to display a message!"
+    "away": {
+        "messageSubject": "Away!",
+        "template": "calendar.html",
+        "messageStatus": "see calendar",
+        "messageType": "away"
     },
-    "cardnotfound" : {
-            "template" : "basicmessage.html",
-            "messageType" : "do-not-disturb",
-            "messageSubject" : "Card Not Found",
-            "messageStatus" : "That card does not exist in my database, please scan another"
+    "test": {
+        "messageSubject": "test1",
+        "template": "basicmessage.html",
+        "messageStatus": "test1",
+        "messageType": "home"
     },
-    "home" : {
-            "template" : "basicmessage.html",
-            "messageType" : "home",
-            "messageSubject" : "Home!",
-            "messageStatus" : "Enter at your own risk!"
-      },
-      "away" : {
-            "template" : "calendar.html",
-            "messageType" : "away",
-            "messageSubject" : "Away!",
-            "messageStatus" : "see calendar"
-      }
+    "home": {
+        "messageSubject": "Home!",
+        "template": "basicmessage.html",
+        "messageStatus": "Enter at your own risk!",
+        "messageType": "home"
+    },
+    "default": {
+        "messageSubject": "Scan Card",
+        "template": "basicmessage.html",
+        "messageStatus": "Please scan a card to display a message!",
+        "messageType": "do-not-disturb"
+    },
+    "cardnotfound": {
+        "messageSubject": "Card Not Found",
+        "template": "basicmessage.html",
+        "messageStatus": "That card does not exist in my database, please scan another",
+        "messageType": "do-not-disturb"
+    }
 }

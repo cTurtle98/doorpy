@@ -82,7 +82,23 @@
         <th>messageSubject</th>
         <th>messageStatus</th>
       </tr>
+      {% for key in messagekeys %}
+      <tr>
+        <td>{{ key }}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      {% endfor %}
     </table>
+  </div>
+  
+  <br>
+  
+  <div id="edit-message">
+    <a href="#edit-message"><h4>Edit a message: </h4></a>
+    
   </div>
 </body>
 </html>

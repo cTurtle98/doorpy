@@ -31,18 +31,25 @@ do the first time setup by running
 
 **Advanced Options** you might need to disable or enable overscan to fill your screen depending on the type of display you are using
 
-#### 3) clone this github repo into your home folder
+#### 3) install git
+
+run
+```
+sudo apt-get install -y git
+```
+
+#### 4) clone this github repo into your home folder
 
 ```git clone https://github.com/cTurtle98/doorpy.git```
 
-#### 4) run setup script
+#### 5) run setup script
 
 ```bash
 chmod 755 doorpy/setup.sh
 ./doorpy/setup.sh
 ```
 
-#### 5) Reboot
+#### 6) Reboot
 
 reboot your pi and you should be good to go
 

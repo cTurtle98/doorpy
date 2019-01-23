@@ -4,30 +4,33 @@
 </head>
 <body>
   <h1> cTurtle98 DoorPy Editor </h1>
-  <h4>Edit a card: </h4>
-  <form action="/edit" method="post">
-    <fieldset>
+  
+  <div id="edit-card">
+    <h4 href="#edit-card">Edit a card: </h4>
+    <form action="/edit" method="post">
+      <fieldset>
       Card Number:
-      <input type= "text" name="cardnum" maxlength="50" list="cards">
-      <datalist id="cards">
-        {% for key in cardkeys %}
-        <option value="{{ key }}"></option>
-        {% endfor %}
-      </datalist>
-        Message A:
-        <select name="message_a">
-          {% for key in messagekeys %}
-          <option value="{{ key }}">{{ key }}</option>
+        <input type= "text" name="cardnum" maxlength="50" list="cards">
+        <datalist id="cards">
+          {% for key in cardkeys %}
+          <option value="{{ key }}"></option>
           {% endfor %}
-        </select>
-        Message B:
-        <select name="message_b">
-          {% for key in messagekeys %}
-          <option value="{{ key }}">{{ key }}</option>
-          {% endfor %}
-        </select>
-      <input type="submit" value="Submit">
-    </fieldset>
-  </form>
+        </datalist>
+          Message A:
+          <select name="message_a">
+            {% for key in messagekeys %}
+            <option value="{{ key }}">{{ key }}</option>
+            {% endfor %}
+          </select>
+          Message B:
+          <select name="message_b">
+            {% for key in messagekeys %}
+            <option value="{{ key }}">{{ key }}</option>
+            {% endfor %}
+          </select>
+        <input type="submit" value="Submit">
+      </fieldset>
+   </form>
+  </div>
 </body>
 </html>

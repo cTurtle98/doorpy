@@ -36,6 +36,7 @@ echo '''
 
 echo "ENABLING AUTOMATIC PYTHON SERVER START"
 echo '''
-git pull doorpy &&\
-python3 doorpy/door.py &
+cd doorpy &&\
+git pull &&\
+python3 door.py &
 ''' >> $HOME/.bash_profile

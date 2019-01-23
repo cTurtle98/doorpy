@@ -17,10 +17,13 @@
   }
   </style>
 </head>
+  
 <body>
+  
   <h1> cTurtle98 DoorPy Editor </h1>
-  <div id="cards-list">
-    <a href="#cards-list"><h4>Cards List: </h4></a>
+  
+  <div id="card-list">
+    <a href="#card-list"><h4>Cards List: </h4></a>
     <table>
       <tr>
         <th>Card Number</th>
@@ -36,9 +39,12 @@
       {% endfor %}
     </table>
   </div>
+  
+  <br>
+  
   <div id="edit-card">
     <a href="#edit-card"><h4>Edit a card: </h4></a>
-    <form action="/edit" method="post">
+    <form action="/editcard" method="post">
       <fieldset>
       Card Number:
         <input type= "text" name="cardnum" maxlength="50" list="cards">
@@ -62,6 +68,21 @@
         <input type="submit" value="Submit">
       </fieldset>
    </form>
+  </div>
+  
+  <br>
+  
+  <div id="message-list">
+    <a href="#message-list"><h4>Messages List: </h4></a>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>template</th>
+        <th>messageType</th>
+        <th>messageSubject</th>
+        <th>messageStatus</th>
+      </tr>
+    </table>
   </div>
 </body>
 </html>

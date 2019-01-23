@@ -1,12 +1,12 @@
 {
     "0005150671": {
-        "B": "test",
-        "A": "test",
-        "active": "A"
+        "active": "A",
+        "B": "away",
+        "A": "home"
     },
     "12345": {
+        "active": "A",
         "B": "away",
-        "A": "home",
-        "active": "A"
+        "A": "home"
     }
 }

@@ -98,6 +98,30 @@
   
   <div id="edit-message">
     <a href="#edit-message"><h4>Edit a message: </h4></a>
+    <form action="/editmessage" method="post">
+      <fieldset>
+        Name:
+        <input type= "text" name="messageName" maxlength="50" list="messages">
+        <datalist id="messages">
+          {% for key in messagekeys %}
+          <option value="{{ key }}"></option>
+          {% endfor %}
+        </datalist>
+        Template:
+        <select name="messageTemplate">
+          {% for template in templateList %}
+          <option value="{{ template }}">{{ template }}</option>
+          {% endfor %}
+        </select>
+        messageType:
+        <select name="messageType">
+          <option value="home">home</option>
+          <option value="away">away</option>
+          <option value="do-not-disturb">do-not-disturb</option>
+        </select>
+        
+      </fieldset>
+    </form>
     
   </div>
 </body>

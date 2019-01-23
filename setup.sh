@@ -13,6 +13,10 @@ sudo apt-get install -y --no-install-recommends xserver-xorg x11-xserver-utils x
 echo "INSTALLING CHROMIUM FOR MESSAGE BOARD"
 sudo apt-get install -y --no-install-recommends chromium-browser
 
+echo "INSTALLING PYTHON DEPENDENCIES"
+sudo apt-get install -y python3 python-pip
+pip install Flask
+
 echo "CHANGING OPENBOX CONFIG FOR X11 SETTINGS WE NEED"
 echo '''
 # Disable any form of screen saver / screen blanking / power management

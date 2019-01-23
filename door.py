@@ -64,7 +64,7 @@ def index() :
     except:
         return render_template(messagesdict["cardnotfound"]["template"], **messagesdict["cardnotfound"])
     
-@app.route('/edit')
+@app.route('/edit', methods=['GET', 'POST'])
 def edit() :
     ''' this is a route for registering new cards and messages, must be accessed remotely'''
 

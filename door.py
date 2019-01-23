@@ -81,12 +81,22 @@ def edit() :
 
 @app.route('/editcard', methods=['POST'])
 def editcard() :
+    ''' takes post request with form values from /edit and saves them to the dict then pushes them to the json files'''
     
+    cardsdict[request.form.get('cardnum')] = {
+        "A" :  request.form.get('message_a'),
+        "B" :  request.form.get('message_b'),
+        "active" : "A"
+    }
     
-    print('hello')
+    with open('cards.json', 'w') as f:
+        json.dump(cardsdict, f, indent=4)
+    
+    return redirect("/edit")
 
 @app.route('/editmessage', methods=['POST'])
 def editmessage() :
+    ''' takes post request with form values from /edit and saves them to the dict then pushes them to the json files'''
     
     messagesdict[request.form.get('messageName')] = {
         "template" : request.form.get('messageTemplate'),

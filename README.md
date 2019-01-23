@@ -11,8 +11,10 @@ https://www.raspberrypi.org/downloads/raspbian/
 #### First boot
 
 boot up the pi and login with 
-````user: pi
-pass: raspberry```
+```
+user: pi
+pass: raspberry
+```
 
 do the first time setup by running 
 ```sudo raspi-config```

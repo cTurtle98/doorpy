@@ -84,13 +84,15 @@
         <th>messageSubject</th>
         <th>messageStatus</th>
       </tr>
+      {% for key in messagekeys %}
       <tr>
-        <td>{ for keys in dict }</td>
+        <td>{{ key }}</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
       </tr>
+      {% endfor %}
     </table>
   </div>
   

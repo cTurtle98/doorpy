@@ -53,6 +53,7 @@
           <option value="{{ key }}"></option>
           {% endfor %}
         </datalist>
+        <br>
           Message A:
           <select name="message_a">
             {% for key in messagekeys %}
@@ -65,6 +66,7 @@
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}
           </select>
+        <br>
         <input type="submit" value="Submit">
       </fieldset>
    </form>
@@ -119,10 +121,12 @@
           <option value="away">away</option>
           <option value="do-not-disturb">do-not-disturb</option>
         </select>
+        <br>
         messageSubject:
         <input type="text" name="messageSubject" autocomplete="off">
         messageStatus:
         <textarea name="messageStatus" rows="1" cols="10"></textarea>
+        <br>
         <input type="submit" value="Submit">
       </fieldset>
     </form>

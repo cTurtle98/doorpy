@@ -1,12 +1,5 @@
-{% extends "base.html" %}
-{% block messageTypeBlock %}
-## home away do-not-disturb
-    {{ messageType }}
-{% endblock %}
-{% block messageSubjectBlock %}
-    {{ messageSubject }}
-{% endblock %}
+{% extends "basicmessage.html" %}
 {% block messageStatusBlock %}
-    {{ messageStatus }}
+    {{ Super() }}
 ## INSERT GOOGLE CALENDAR IFRAME HERE
 {% endblock %}

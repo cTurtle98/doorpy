@@ -75,7 +75,7 @@ def edit() :
         'edit.html',
         cardkeys=cardsdict.keys(),
         messagekeys=messagesdict.keys(),
-        templateList=os.listdir(template_folder),
+        templateList=os.listdir('html/templates/'),
     )
 
 @app.route('/editcard', methods=['POST'])

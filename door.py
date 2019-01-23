@@ -64,13 +64,21 @@ def index() :
     except:
         return render_template(messagesdict["cardnotfound"]["template"], **messagesdict["cardnotfound"])
     
-@app.route('/edit', methods=['GET', 'POST'])
+@app.route('/edit', methods=['GET'])
 def edit() :
-    ''' this is a route for registering new cards and messages, must be accessed remotely'''
-    
-    
-    
+    ''' remote edit page for messages and cards'''
+
     return render_template('edit.html', cardkeys=cardsdict.keys(), messagekeys=messagesdict.keys(), carditems=cardsdict.items(), messageitems=messagesdict.items())
+
+@app.route('/editcard' methods=['POST'])
+def editcard() :
+    
+    
+
+@app.route('/editmessage' methods=['POST'])
+def editmessage() :
+    
+    
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

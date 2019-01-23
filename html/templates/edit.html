@@ -101,7 +101,7 @@
     <form action="/editmessage" method="post">
       <fieldset>
         Name:
-        <input type= "text" name="messageName" maxlength="50" list="messages">
+        <input type= "text" name="messageName" maxlength="50" list="messages" autocomplete="off">
         <datalist id="messages">
           {% for key in messagekeys %}
           <option value="{{ key }}"></option>
@@ -119,6 +119,10 @@
           <option value="away">away</option>
           <option value="do-not-disturb">do-not-disturb</option>
         </select>
+        messageSubject:
+        <input type="text" name="messageSubject" autocomplete="off">
+        messageStatus:
+        <textarea name="messageStatus" rows="2" cols="25"></textarea>
         
       </fieldset>
     </form>

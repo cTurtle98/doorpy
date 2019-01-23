@@ -10,21 +10,24 @@ https://www.raspberrypi.org/downloads/raspbian/
 
 #### First boot
 
-boot up the pi and login with `user: pi` `pass: raspberry`
+boot up the pi and login with 
+````user: pi
+pass: raspberry```
 
-do the first time setup by running `sudo raspi-config`
+do the first time setup by running 
+```sudo raspi-config```
 
-*Localization Options:* select your region and keyboard
+**Localization Options:** select your region and keyboard
 
-*Change User Password* change the password on your pi because everyone knows the defaults and you dont want to be hacked
+**Change User Password** change the password on your pi because everyone knows the defaults and you dont want to be hacked
 
-*Network Options* setup your wifi if you have it
+**Network Options** setup your wifi if you have it
 
-*Boot Options* select "Desktop / cli" and enable "Console Autologin" (we will see why later)
+**Boot Options** select "Desktop / cli" and enable "Console Autologin" (we will see why later)
 
-*Interfacing Options* if you will want remote access enable ssh
+**Interfacing Options** if you will want remote access enable ssh
 
-*Advanced Options* you might need to disable or enable overscan to fill your screen depending on the type of display you are using
+**Advanced Options** you might need to disable or enable overscan to fill your screen depending on the type of display you are using
 
 #### clone this github repo into your home folder
 

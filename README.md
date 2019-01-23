@@ -1,6 +1,26 @@
 # doorpy
 python flask based web server for message board mounted to my door
 
+## setup
+
+#### install raspbian on your pi
+
+use this guide to install raspbian on your pi
+https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
+
+#### some step I havent figured out yet
+
+#### clone this github repo into your home folder
+
+```git clone https://github.com/cTurtle98/doorpy.git```
+
+#### run setup script
+
+```bash
+chmod 755 doorpy/setup.sh
+./doorpy/setup.sh
+```
+
 ## customization
 
 changes to make to make this your own

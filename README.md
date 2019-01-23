@@ -45,7 +45,6 @@ sudo apt-get install -y git
 #### 5) run setup script
 
 ```bash
-chmod 755 doorpy/setup.sh
 ./doorpy/setup.sh
 ```
 

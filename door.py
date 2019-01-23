@@ -73,12 +73,12 @@ def edit() :
 @app.route('/editcard', methods=['POST'])
 def editcard() :
     
-    
+    print('hello')
 
 @app.route('/editmessage', methods=['POST'])
 def editmessage() :
     
-    
+    print('hello')
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

@@ -14,7 +14,6 @@
         <option value="{{ key }}"></option>
         {% endfor %}
       </datalist>
-      <fieldset>
         Message A:
         <select name="message_a">
           {% for key in messagekeys %}
@@ -27,7 +26,6 @@
           <option value="{{ key }}">{{ key }}</option>
           {% endfor %}
         </select>
-      </fieldset>
       <input type="submit" value="Submit">
     </fieldset>
   </form>

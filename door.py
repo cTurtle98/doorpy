@@ -96,7 +96,7 @@ def editmessage() :
     }
     
     with open('messages.json', 'w') as f:
-        json.dump(cardsdict, f, indent=4)
+        json.dump(messagesdict, f, indent=4)
     
     return redirect("/edit")
 

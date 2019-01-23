@@ -1,13 +1,26 @@
 {
-    "12345": {
-        "active": "A",
-        "B": "away",
-        "A": "home"
+    "default" : {
+            "template" : "basicmessage.html",
+            "messageType" : "do-not-disturb",
+            "messageSubject" : "Scan Card",
+            "messageStatus" : "Please scan a card to display a message!"
     },
-    "test1": {
-        "messageStatus": "bla2",
-        "template": "basicmessage.html",
-        "messageSubject": "bla",
-        "messageType": "home"
-    }
+    "cardnotfound" : {
+            "template" : "basicmessage.html",
+            "messageType" : "do-not-disturb",
+            "messageSubject" : "Card Not Found",
+            "messageStatus" : "That card does not exist in my database, please scan another"
+    },
+    "home" : {
+            "template" : "basicmessage.html",
+            "messageType" : "home",
+            "messageSubject" : "Home!",
+            "messageStatus" : "Enter at your own risk!"
+      },
+      "away" : {
+            "template" : "calendar.html",
+            "messageType" : "away",
+            "messageSubject" : "Away!",
+            "messageStatus" : "see calendar"
+      }
 }

@@ -88,7 +88,7 @@ def editcard() :
 @app.route('/editmessage', methods=['POST'])
 def editmessage() :
     
-    cardsdict[request.form.get('messageName')] = {
+    messagesdict[request.form.get('messageName')] = {
         "template" : request.form.get('messageTemplate'),
         "messageType" : request.form.get('messageType'),
         "messageSubject" : request.form.get('messageSubject'),

@@ -5,7 +5,7 @@ pydoor python program
 this program uses python flask to host the sign on my door
 """
 
-from flask import Flask, render_template, request, abort, Response
+from flask import Flask, render_template, request, redirect
 import json
 import os
 
@@ -98,7 +98,7 @@ def editmessage() :
     with open('messages.json', 'w') as f:
         json.dump(cardsdict, f, indent=4)
     
-    return Response(status=201)
+    return redirect("/edit", code=201)
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

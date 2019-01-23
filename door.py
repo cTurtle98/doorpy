@@ -104,5 +104,5 @@ if __name__ == '__main__' :
         # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER
         #debug=True,
         host='::',
-        port=80
+        port=8080
     )

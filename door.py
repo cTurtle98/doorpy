@@ -96,7 +96,7 @@ def editmessage() :
     }
     
     with open('messages.json', 'w') as f:
-        json.dump(cardsdict, f)
+        json.dump(cardsdict, f, indent=4)
     
     return abort(200)
 

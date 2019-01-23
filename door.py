@@ -98,7 +98,7 @@ def editmessage() :
     with open('messages.json', 'w') as f:
         json.dump(cardsdict, f, indent=4)
     
-    return redirect("/edit", code=201)
+    return redirect("/edit")
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

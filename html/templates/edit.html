@@ -6,21 +6,24 @@
   <h1> cTurtle98 DoorPy Editor </h1>
   <h4>Add a card: </h4>
   <form>
-    Card Number:
-    <input type= "text" name="cardnum">
     <fieldset>
-      Message A:
-      <select name="message_a">
-        {% for key in messagekeys %}
-        <option value="{{ key }}">{{ key }}</option>
-        {% endfor %}
-      </select>
-      Message B:
-      <select name="message_b">
-        {% for key in messagekeys %}
-        <option value="{{ key }}">{{ key }}</option>
-        {% endfor %}
-      </select>
+      Card Number:
+      <input type= "text" name="cardnum">
+      <fieldset>
+        Message A:
+        <select name="message_a">
+          {% for key in messagekeys %}
+          <option value="{{ key }}">{{ key }}</option>
+          {% endfor %}
+        </select>
+        Message B:
+        <select name="message_b">
+          {% for key in messagekeys %}
+          <option value="{{ key }}">{{ key }}</option>
+          {% endfor %}
+        </select>
+      </fieldset>
+      <input type="submit" value="Submit">
     </fieldset>
   </form>
 </body>

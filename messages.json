@@ -3,5 +3,11 @@
         "active": "A",
         "B": "away",
         "A": "home"
+    },
+    "test1": {
+        "messageStatus": "bla2",
+        "template": "basicmessage.html",
+        "messageSubject": "bla",
+        "messageType": "home"
     }
 }

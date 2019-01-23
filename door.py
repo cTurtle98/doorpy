@@ -7,6 +7,7 @@ this program uses python flask to host the sign on my door
 
 from flask import Flask, render_template, request, abort
 import json
+import os
 
 #enable personal debug messages
 DEBUG = True
@@ -74,7 +75,7 @@ def edit() :
         'edit.html',
         cardkeys=cardsdict.keys(),
         messagekeys=messagesdict.keys(),
-        
+        templateList=os.listdir(template_folder),
     )
 
 @app.route('/editcard', methods=['POST'])

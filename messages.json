@@ -1,1 +1,7 @@
-{"test": {"messageSubject": "test", "template": "basicmessage.html", "messageType": "home", "messageStatus": "this is a test message"}, "12345": {"active": "A", "A": "home", "B": "away"}}
+{
+    "12345": {
+        "active": "A",
+        "B": "away",
+        "A": "home"
+    }
+}

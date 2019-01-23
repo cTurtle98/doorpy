@@ -3,12 +3,12 @@ python flask based web server for message board mounted to my door
 
 ## setup
 
-#### Raspbian
+#### 1) Raspbian
 
 Download raspbian Lite and burn it to the SD card for pi you are using
 https://www.raspberrypi.org/downloads/raspbian/
 
-#### First boot
+#### 2) First boot
 
 boot up the pi and login with 
 ```
@@ -31,16 +31,20 @@ do the first time setup by running
 
 **Advanced Options** you might need to disable or enable overscan to fill your screen depending on the type of display you are using
 
-#### clone this github repo into your home folder
+#### 3) clone this github repo into your home folder
 
 ```git clone https://github.com/cTurtle98/doorpy.git```
 
-#### run setup script
+#### 4) run setup script
 
 ```bash
 chmod 755 doorpy/setup.sh
 ./doorpy/setup.sh
 ```
+
+#### 5) Reboot
+
+reboot your pi and you should be good to go
 
 ## customization
 

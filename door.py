@@ -1,6 +1,6 @@
 """
 Ciaran Farley
-pydoor python program
+doorpy
 
 this program uses python flask to host the sign on my door
 """
@@ -12,24 +12,13 @@ import os
 #enable personal debug messages
 DEBUG = True
 
-## THIS BLOCK OF CODE IS BAD AND NEEDS TO BE GONE
+# load cards json into dictionary for runtime use
 try:
     with open("cards.json") as f:
         cardsdict = json.load(f)
 except:
-    #MINIMAL DICTS FOR TESTING
-    cardsdict = {
-        #card number 12345
-        "12345" : {
-            #primary message
-            "A" : "home",
-            #secondary message
-            "B" : "away",
-            #was last seen message primary or secondary
-            "active" : "A"
-        }
-    }
-## END BAD CODE BLOCK
+    cardsdict = {}
+    print("ERROR! Could not load cards dictionary!")
 
 # load messages json into dictionary for runtime use
 try:

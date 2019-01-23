@@ -70,12 +70,12 @@ def edit() :
 
     return render_template('edit.html', cardkeys=cardsdict.keys(), messagekeys=messagesdict.keys(), carditems=cardsdict.items(), messageitems=messagesdict.items())
 
-@app.route('/editcard' methods=['POST'])
+@app.route('/editcard', methods=['POST'])
 def editcard() :
     
     
 
-@app.route('/editmessage' methods=['POST'])
+@app.route('/editmessage', methods=['POST'])
 def editmessage() :
     
     

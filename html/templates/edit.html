@@ -4,7 +4,20 @@
 </head>
 <body>
   <h1> cTurtle98 DoorPy Editor </h1>
-  
+  <div id="cards-list">
+    <table>
+      <tr>
+        <th>Card Number</th>
+        <th>Message A</th>
+        <th>Message B</th>
+      </tr>
+      {% for card in cards %}
+      <tr>
+        <td>{{ card }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
   <div id="edit-card">
     <a href="#edit-card"><h4>Edit a card: </h4></a>
     <form action="/edit" method="post">

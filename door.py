@@ -67,8 +67,8 @@ def index() :
 @app.route('/edit', methods=['GET', 'POST'])
 def edit() :
     ''' this is a route for registering new cards and messages, must be accessed remotely'''
-
-    return render_template('edit.html')
+    
+    return render_template('edit.html', cardkeys=cardsdict.keys(), messagekeys=messagesdict.keys())
 
 if __name__ == '__main__' :
     # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER

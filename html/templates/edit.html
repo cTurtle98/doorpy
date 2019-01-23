@@ -8,8 +8,8 @@
   <form action="/edit" method="post">
     <fieldset>
       Card Number:
-      <input type= "text" name="cardnum" maxlength="50">
-      <datalist id="cardnum">
+      <input type= "text" name="cardnum" maxlength="50" list="cards">
+      <datalist id="cards">
         {% for key in cardkeys %}
         <option value="{{ key }}"></option>
         {% endfor %}

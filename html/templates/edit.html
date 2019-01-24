@@ -93,9 +93,10 @@
       {% for key in messagesdict.keys() %}
       <tr>
         <td>{{ key }}</td>
-        {% for col in messagesdict[key].keys() %}
-        <td>{{ messagesdict[key][col] }}</td>
-        {% endfor %}
+        <td>{{ messagesdict[key]["template"] }}</td>
+        <td>{{ messagesdict[key]["messageType"] }}</td>
+        <td>{{ messagesdict[key]["messageSubject"] }}</td>
+        <td>{{ messagesdict[key]["messageStatus"] }}</td>
       </tr>
       {% endfor %}
     </table>

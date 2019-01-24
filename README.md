@@ -29,8 +29,6 @@ do the first time setup by running
 
 **Interfacing Options** if you will want remote access enable ssh
 
-**Advanced Options** you might need to disable or enable overscan to fill your screen depending on the type of display you are using
-
 #### 3) install git
 
 run

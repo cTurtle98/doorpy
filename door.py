@@ -64,9 +64,8 @@ def edit() :
     
     return render_template(
         'edit.html',
-        **cardsdict,
-        cardkeys=cardsdict.keys(),
-        messagekeys=messagesdict.keys(),
+        cardsdict=cardsdict,
+        messagesdict=messagesdict,
         templateList=os.listdir('html/templates/'),
     )
 

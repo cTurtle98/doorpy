@@ -21,7 +21,7 @@ printf '#'%.0s {1..98} ; echo
 
 echo "INSTALLING PYTHON DEPENDENCIES"
 sudo apt-get install -y python3 python3-pip
-pip install Flask
+pip3 install Flask
 
 printf '#'%.0s {1..98} ; echo
 

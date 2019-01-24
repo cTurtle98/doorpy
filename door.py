@@ -10,16 +10,20 @@ import json
 import os
 import subprocess
 
+# setup dictionaries
+cardsdict = {}
+messagesdict = {}
+
 #enable personal debug messages
 DEBUG = True
 
 def load_json_to_dict():
     # load cards json into dictionary for runtime use
     try:
-        with open("json/cards.json") as f:
-            cardsdict = json.load(f)
+        f = open("json/cards.json")
+        cardsdict = json.load(f)
+        f.close
     except:
-        cardsdict = {}
         print("ERROR! Could not load cards dictionary!")
     
     # load messages json into dictionary for runtime use
@@ -28,7 +32,6 @@ def load_json_to_dict():
         messagesdict = json.load(f)
         f.close()
     except:
-        messagesdict = {}
         print("ERROR! Could not load messages dictionary!")
 
 load_json_to_dict()

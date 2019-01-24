@@ -16,6 +16,8 @@ echo
 echo "HIT CTRL+C TO QUIT OR ENTER TO CONTINUE"
 read
 
+sep
+
 echo "UPDATING DEFAULT INSTALLED PACKAGES"
 sudo apt-get update
 sudo apt-get -y upgrade

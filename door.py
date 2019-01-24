@@ -13,22 +13,25 @@ import subprocess
 #enable personal debug messages
 DEBUG = True
 
-# load cards json into dictionary for runtime use
-try:
-    with open("json/cards.json") as f:
-        cardsdict = json.load(f)
-except:
-    cardsdict = {}
-    print("ERROR! Could not load cards dictionary!")
+def jsonload():
+    # load cards json into dictionary for runtime use
+    try:
+        with open("json/cards.json") as f:
+            cardsdict = json.load(f)
+    except:
+        cardsdict = {}
+        print("ERROR! Could not load cards dictionary!")
+    
+    # load messages json into dictionary for runtime use
+    try:
+        f = open("json/messages.json")
+        messagesdict = json.load(f)
+        f.close()
+    except:
+        messagesdict = {}
+        print("ERROR! Could not load messages dictionary!")
 
-# load messages json into dictionary for runtime use
-try:
-    f = open("json/messages.json")
-    messagesdict = json.load(f)
-    f.close()
-except:
-    messagesdict = {}
-    print("ERROR! Could not load messages dictionary!")
+jsonload()
 
 # setup the flask enviroment
 app = Flask(__name__, template_folder='html/templates/')
@@ -108,13 +111,16 @@ def gitpush() :
     
     return abort(500)
 
+"""
 @app.route('/reload', methods=['POST'])
 def reload() :
     
     subprocess.run("$HOME/doorpy/configs/reload.sh", shell=True)
     
+    jsonload()
+    
     return redirect('/edit')
-"""
+
 
 if __name__ == '__main__' :
     app.run(

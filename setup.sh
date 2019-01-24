@@ -20,7 +20,7 @@ sudo apt-get install -y --no-install-recommends chromium-browser
 printf '#'%.0s {1..98} ; echo
 
 echo "INSTALLING PYTHON DEPENDENCIES"
-sudo apt-get install -y python3 python-pip
+sudo apt-get install -y python3 python3-pip
 pip install Flask
 
 printf '#'%.0s {1..98} ; echo

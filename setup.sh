@@ -26,14 +26,12 @@ pip install Flask
 echo -*20
 
 echo "CHANGING OPENBOX CONFIG FOR X11 SETTINGS WE NEED"
-cat configs/openbox-config > /etc/xdg/openbox/autostart
+cat configs/openbox-config | sudo tee /etc/xdg/openbox/autostart > /dev/null
 
 echo -*20
 
 echo "adding startup script to .bash_profile"
-echo '''
-source $HOME/doorpy/configs/startup.sh
-''' >> $HOME/.bash_profile
+cat $HOME/doorpy/configs/startup.sh > $HOME/.bash_profile
 
 echo -*20
 echo "SETUP COMPLETE PLEASE REBOOT"

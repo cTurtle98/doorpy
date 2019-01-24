@@ -3,7 +3,7 @@
 # doorpy setup script
 # commands to modify a fresh install of raspbian Lite for use with doorpy
 
-sep(){
+sep () {
   printf '#'%.0s {1..98} ; echo
 }
 

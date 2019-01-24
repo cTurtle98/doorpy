@@ -8,6 +8,7 @@ this program uses python flask to host the sign on my door
 from flask import Flask, render_template, request, redirect
 import json
 import os
+import subprocess
 
 #enable personal debug messages
 DEBUG = True
@@ -98,6 +99,20 @@ def editmessage() :
         json.dump(messagesdict, f, indent=4)
     
     return redirect("/edit")
+
+@app.route('/gitpush', methods=['POST'])
+def gitpush() :
+    
+    print('PUSHING JSON FILES TO GITHUB')
+    
+    return abort(500)
+
+@app.route('/reload', methods=['POST'])
+def reload() :
+    
+    subprocess.run("configs/reload.sh", shell=True)
+    
+    return redirect('/edit')
 
 if __name__ == '__main__' :
     app.run(

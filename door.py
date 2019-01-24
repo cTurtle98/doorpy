@@ -100,6 +100,7 @@ def editmessage() :
     
     return redirect("/edit")
 
+"""
 @app.route('/gitpush', methods=['POST'])
 def gitpush() :
     
@@ -113,6 +114,7 @@ def reload() :
     subprocess.run("$HOME/doorpy/configs/reload.sh", shell=True)
     
     return redirect('/edit')
+"""
 
 if __name__ == '__main__' :
     app.run(

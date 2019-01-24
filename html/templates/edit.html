@@ -53,7 +53,7 @@
     <form action="/editcard" method="post">
       <fieldset>
       Card Number:
-        <input type= "text" name="cardnum" maxlength="50" list="cards">
+        <input type= "text" name="cardnum" maxlength="50" list="cards" required>
         <datalist id="cards">
           {% for key in cardsdict.keys() %}
           <option value="{{ key }}"></option>
@@ -110,7 +110,7 @@
     <form action="/editmessage" method="post">
       <fieldset>
         Name:
-        <input type= "text" name="messageName" maxlength="50" list="messages" autocomplete="off">
+        <input type= "text" name="messageName" maxlength="50" list="messages" autocomplete="off" required>
         <datalist id="messages">
           {% for key in messagesdict.keys() %}
           <option value="{{ key }}"></option>

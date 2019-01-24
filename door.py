@@ -42,7 +42,8 @@ def index() :
     
     #if you havent scanned a card yet display a page telling you to
     if cardnum == None:
-        return render_template(messagesdict["default"]["template"], **messagesdict["default"])
+        cardnum = "default"
+#        return render_template(messagesdict["default"]["template"], **messagesdict["default"])
     
     #process scanning a card and retrieving its message
     try:

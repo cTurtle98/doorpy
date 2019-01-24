@@ -95,10 +95,9 @@
       {% for key in messagesdict.keys() %}
       <tr>
         <td>{{ key }}</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        {% for col in messagedict[key].keys() %}
+        <td>{{ messagedict[key][col] }}</td>
+        {% endfor %}
       </tr>
       {% endfor %}
     </table>

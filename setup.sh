@@ -35,4 +35,13 @@ cat $HOME/doorpy/configs/startup.sh > $HOME/.bash_profile
 
 printf '#'%.0s {1..98} ; echo
 
+#ROTATING MONITOR
+
+if grep -Fxq "display_rotate=3" /boot/config.txt
+then
+  echo "display already rotated"
+else
+  echo "display_rotate=3" | sudo tee /boot/config.txt > /dev/null
+fi
+
 echo "SETUP COMPLETE PLEASE REBOOT"

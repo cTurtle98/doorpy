@@ -34,3 +34,6 @@ echo "adding startup script to .bash_profile"
 echo '''
 source $HOME/doorpy/configs/startup.sh
 ''' >> $HOME/.bash_profile
+
+echo -*20
+echo "SETUP COMPLETE PLEASE REBOOT"

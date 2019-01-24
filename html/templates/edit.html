@@ -39,7 +39,7 @@
       {% for key in cardsdict.keys() %}
       <tr>
         <td>{{ key }}</td>
-        {% for message in cardsdict.key.keys() %}
+        {% for message in cardsdict[key].keys() %}
         <td>{{ cardsdict[key][message] }}</td>
         {% endfor %}
       </tr>

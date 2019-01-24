@@ -15,7 +15,7 @@ DEBUG = True
 
 # load cards json into dictionary for runtime use
 try:
-    with open("cards.json") as f:
+    with open("json/cards.json") as f:
         cardsdict = json.load(f)
 except:
     cardsdict = {}
@@ -23,7 +23,7 @@ except:
 
 # load messages json into dictionary for runtime use
 try:
-    f = open("messages.json")
+    f = open("json/messages.json")
     messagesdict = json.load(f)
     f.close()
 except:
@@ -79,7 +79,7 @@ def editcard() :
         "active" : "A"
     }
     
-    with open('cards.json', 'w') as f:
+    with open('json/cards.json', 'w') as f:
         json.dump(cardsdict, f, indent=4)
     
     return redirect("/edit")
@@ -95,7 +95,7 @@ def editmessage() :
         "messageStatus" : request.form.get('messageStatus')
     }
     
-    with open('messages.json', 'w') as f:
+    with open('json/messages.json', 'w') as f:
         json.dump(messagesdict, f, indent=4)
     
     return redirect("/edit")

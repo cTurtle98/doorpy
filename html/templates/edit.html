@@ -33,16 +33,14 @@
     <table>
       <tr>
         <th>Card Number</th>
-        <th>Active</th>
         <th>Message A</th>
         <th>Message B</th>
       </tr>
       {% for key in cardsdict.keys() %}
       <tr>
         <td>{{ key }}</td>
-        {% for message in cardsdict[key].keys() %}
-        <td>{{ cardsdict[key][message] }}</td>
-        {% endfor %}
+        <td>{{ cardsdict[key]['A'] }}</td>
+        <td>{{ cardsdict[key]['B'] }}</td>
       </tr>
       {% endfor %}
     </table>

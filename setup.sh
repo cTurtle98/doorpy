@@ -46,4 +46,10 @@ cat $HOME/doorpy/configs/bootconfig | sudo tee /boot/config.txt > /dev/null
 
 sep
 
+echo "CHANGE MOTD"
+
+cat $HOME/doorpy/configs/motd | sudo tee /etc/motd > /dev/null
+
+sep
+
 echo "SETUP COMPLETE PLEASE REBOOT"

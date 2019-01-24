@@ -50,6 +50,7 @@ git clone https://github.com/cTurtle98/doorpy.git
 ```bash
 ~/doorpy/setup.sh
 ```
+if this is a fresh pi you can ignore the warning message and hit ENTER
 
 #### 6) Reboot
 

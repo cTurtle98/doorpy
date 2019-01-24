@@ -31,10 +31,10 @@ def load_json_to_dict():
         messagesdict = {}
         print("ERROR! Could not load messages dictionary!")
 
+load_json_to_dict()
+        
 # setup the flask enviroment
 app = Flask(__name__, template_folder='html/templates/')
-
-load_json_to_dict()
 
 @app.route('/')
 def index() :

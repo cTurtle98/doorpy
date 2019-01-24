@@ -110,7 +110,7 @@ def gitpush() :
 @app.route('/reload', methods=['POST'])
 def reload() :
     
-    subprocess.run("configs/reload.sh", shell=True)
+    subprocess.run("$HOME/doorpy/configs/reload.sh", shell=True)
     
     return redirect('/edit')
 

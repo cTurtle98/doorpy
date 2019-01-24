@@ -27,6 +27,8 @@ $HOME/.bash_profile
 echo
 echo "HIT CTRL+C TO QUIT OR ENTER TO CONTINUE"
 read
+printf "CONTINUING"
+for i in {1..5}; do sleep 1; printf " ."; done
 
 sep
 

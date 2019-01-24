@@ -11,39 +11,39 @@ echo "UPDATING DEFAULT INSTALLED PACKAGES"
 sudo apt-get update
 sudo apt-get -y upgrade
 
-sep()
+sep
 
 echo "INSTALLING MINIMUM GUI FOR MESSAGE BOARD"
 sudo apt-get install -y --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
 
 
-sep()
+sep
 
 echo "INSTALLING CHROMIUM FOR MESSAGE BOARD"
 sudo apt-get install -y --no-install-recommends chromium-browser
 
-sep()
+sep
 
 echo "INSTALLING PYTHON DEPENDENCIES"
 sudo apt-get install -y python3 python3-pip
 pip3 install Flask
 
-sep()
+sep
 
 echo "CHANGING OPENBOX CONFIG FOR X11 SETTINGS WE NEED"
 cat configs/openbox-config | sudo tee /etc/xdg/openbox/autostart > /dev/null
 
-sep()
+sep
 
 echo "adding startup script to .bash_profile"
 cat $HOME/doorpy/configs/startup.sh > $HOME/.bash_profile
 
-sep()
+sep
 
 echo "MONITOR SETTINGS CHANGE"
 
 cat $HOME/doorpy/configs/bootconfig | sudo tee /boot/config.txt > /dev/null
 
-sep()
+sep
 
 echo "SETUP COMPLETE PLEASE REBOOT"

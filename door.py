@@ -33,8 +33,10 @@ def load_json_to_dict():
         f.close()
     except:
         print("ERROR! Could not load messages dictionary!")
+    
+    return cardsdict, messagesdict
 
-load_json_to_dict()
+cardsdict, messagesdict = load_json_to_dict()
         
 # setup the flask enviroment
 app = Flask(__name__, template_folder='html/templates/')
@@ -120,7 +122,7 @@ def reload() :
     
     subprocess.run("$HOME/doorpy/configs/reload.sh", shell=True)
     
-    load_json_to_dict()
+    cardsdict, messagesdict = load_json_to_dict()
     
     return redirect('/edit')
 

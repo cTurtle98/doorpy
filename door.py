@@ -62,6 +62,7 @@ def index() :
             cardsdict[cardnum]['active'] = 'A'
             return render_template(messagesdict[cardsdict[cardnum]['A']]['template'], **messagesdict[cardsdict[cardnum]['A']])
     except:
+        cardsdict[cardnum] = {"A":None, "B":None, "active":"A"}
         return render_template(messagesdict["cardnotfound"]["template"], **messagesdict["cardnotfound"])
     
 @app.route('/edit', methods=['GET'])

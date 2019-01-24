@@ -17,7 +17,9 @@ pass: raspberry
 ```
 
 do the first time setup by running 
-```sudo raspi-config```
+```bash
+sudo raspi-config
+```
 
 **Localization Options:** select your region and keyboard
 
@@ -32,18 +34,21 @@ do the first time setup by running
 #### 3) install git
 
 run
-```
+```bash
 sudo apt-get install -y git
 ```
 
 #### 4) clone this github repo into your home folder
 
-```git clone https://github.com/cTurtle98/doorpy.git```
+```bash
+cd ~
+git clone https://github.com/cTurtle98/doorpy.git
+```
 
 #### 5) run setup script
 
 ```bash
-./doorpy/setup.sh
+~/doorpy/setup.sh
 ```
 
 #### 6) Reboot

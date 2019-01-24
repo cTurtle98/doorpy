@@ -4,9 +4,9 @@
         "B": "away",
         "A": "home"
     },
-    "12345": {
+    "default": {
         "active": "A",
         "B": "away",
-        "A": "home"
+        "A": "away"
     }
 }

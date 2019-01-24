@@ -13,7 +13,7 @@ import subprocess
 #enable personal debug messages
 DEBUG = True
 
-def jsonload():
+def load_json_to_dict():
     # load cards json into dictionary for runtime use
     try:
         with open("json/cards.json") as f:
@@ -31,10 +31,10 @@ def jsonload():
         messagesdict = {}
         print("ERROR! Could not load messages dictionary!")
 
-jsonload()
-
 # setup the flask enviroment
 app = Flask(__name__, template_folder='html/templates/')
+
+load_json_to_dict()
 
 @app.route('/')
 def index() :
@@ -117,7 +117,7 @@ def reload() :
     
     subprocess.run("$HOME/doorpy/configs/reload.sh", shell=True)
     
-    jsonload()
+    load_json_to_dict()
     
     return redirect('/edit')
 

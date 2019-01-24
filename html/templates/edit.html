@@ -36,7 +36,7 @@
         <th>Message A</th>
         <th>Message B</th>
       </tr>
-      {% for key in cardkeys %}
+      {% for key in cardsdict.keys %}
       <tr>
         <td>{{ key }}</td>
         <td></td>
@@ -55,20 +55,20 @@
       Card Number:
         <input type= "text" name="cardnum" maxlength="50" list="cards">
         <datalist id="cards">
-          {% for key in cardkeys %}
+          {% for key in cardsdict.keys %}
           <option value="{{ key }}"></option>
           {% endfor %}
         </datalist>
         <br>
           Message A:
           <select name="message_a">
-            {% for key in messagekeys %}
+            {% for key in messagesdict.keys %}
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}
           </select>
           Message B:
           <select name="message_b">
-            {% for key in messagekeys %}
+            {% for key in messagesdict.keys %}
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}
           </select>
@@ -90,7 +90,7 @@
         <th>messageSubject</th>
         <th>messageStatus</th>
       </tr>
-      {% for key in messagekeys %}
+      {% for key in messagesdict.keys %}
       <tr>
         <td>{{ key }}</td>
         <td></td>
@@ -111,7 +111,7 @@
         Name:
         <input type= "text" name="messageName" maxlength="50" list="messages" autocomplete="off">
         <datalist id="messages">
-          {% for key in messagekeys %}
+          {% for key in messagesdict.keys %}
           <option value="{{ key }}"></option>
           {% endfor %}
         </datalist>

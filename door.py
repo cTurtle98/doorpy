@@ -119,7 +119,7 @@ def reload() :
 if __name__ == '__main__' :
     app.run(
         # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER
-        debug=True,
+        #debug=True,
         host='::',
         port=8080
     )

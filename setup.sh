@@ -13,12 +13,11 @@ echo "WARNING THIS SCRIPT CHANGES SYSTEM FILES TO ONLY HAVE MY CONFIGURATIONS"
 echo
 echo """
 IF YOU HAME MODIFIED YOUR SYSTEM FILES
-PLEASE MAKE A BACKUP BEFORE RUNNING THIS SCRIPT
-YOU WILL NEED TO COPY YOUR CHANGES BACK INTO THE FILES AFTER THIS SCRIPT RUNS
+they will be renamed as backups and you can copy your changes into my new files after this script compleyes
 """
 echo
 echo """
-FILES I AM CLOBBERING:
+FILES I AM REPLACING:
 /etc/xdg/openbox/autostart
 $HOME/.bash_profile
 /boot/config.txt

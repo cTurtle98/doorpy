@@ -76,11 +76,14 @@ def index() :
 def edit() :
     ''' remote edit page for messages and cards'''    
     
+    templateList = os.listdir('templates/')
+    templateList = templateList.remove('pages')
+    
     return render_template(
         'pages/edit.j2',
         cardsdict=cardsdict,
         messagesdict=messagesdict,
-        templateList=(os.listdir('templates/')).remove('pages'),
+        templateList=templateList,
     )
 
 @app.route('/editcard', methods=['POST'])

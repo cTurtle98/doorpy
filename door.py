@@ -39,7 +39,7 @@ def load_json_to_dict():
 cardsdict, messagesdict = load_json_to_dict()
         
 # setup the flask enviroment
-app = Flask(__name__, template_folder='html/templates/')
+app = Flask(__name__, template_folder='templates/')
 
 @app.route('/')
 def index() :
@@ -72,10 +72,10 @@ def edit() :
     
     
     return render_template(
-        'edit.html',
+        'pages/edit.html',
         cardsdict=cardsdict,
         messagesdict=messagesdict,
-        templateList=os.listdir('html/templates/'),
+        templateList=os.listdir('templates/'),
     )
 
 @app.route('/editcard', methods=['POST'])

@@ -1,22 +1,4 @@
 {
-    "away": {
-        "messageSubject": "Away!",
-        "template": "calendar.html",
-        "messageStatus": "see calendar",
-        "messageType": "away"
-    },
-    "test": {
-        "messageSubject": "blarg",
-        "template": "basicmessage.html",
-        "messageStatus": "blart",
-        "messageType": "home"
-    },
-    "home": {
-        "messageSubject": "Home!",
-        "template": "basicmessage.html",
-        "messageStatus": "Enter at your own risk!",
-        "messageType": "home"
-    },
     "default": {
         "messageSubject": "Scan Card",
         "template": "basicmessage.html",

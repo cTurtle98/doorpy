@@ -33,12 +33,14 @@
     <table>
       <tr>
         <th>Card Number</th>
+        <th>Nickname</th>
         <th>Message A</th>
         <th>Message B</th>
       </tr>
       {% for key in cardsdict.keys() %}
       <tr>
         <td>{{ key }}</td>
+        <td>{{ cardsdict[key]['nickname'] }}</td>
         <td>{{ cardsdict[key]['A'] }}</td>
         <td>{{ cardsdict[key]['B'] }}</td>
       </tr>

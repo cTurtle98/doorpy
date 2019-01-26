@@ -14,8 +14,6 @@ import subprocess
 cardsdict = {}
 messagesdict = {}
 
-#enable personal debug messages
-DEBUG = True
 
 def load_json_to_dict():
     # load cards json into dictionary for runtime use
@@ -122,7 +120,7 @@ def gitpush() :
 @app.route('/reload', methods=['POST'])
 def reload() :
     
-    subprocess.run("$HOME/doorpy/configs/reload.sh", shell=True)
+    subprocess.run("$HOME/doorpy/resources/reload.sh", shell=True)
     
     cardsdict, messagesdict = load_json_to_dict()
     

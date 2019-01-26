@@ -1,5 +1,7 @@
 # doorpy
-python flask based web server for message board mounted to my door
+
+message board system written in python for raspberry pi
+uses raspbian lite with minimal modifications to allow chromium pointed at localhost
 
 ## Features
 
@@ -66,29 +68,13 @@ if this is a fresh pi you can ignore the warning message and hit ENTER
 
 #### 6) Reboot
 
-reboot your pi and you should be good to go
+reboot your pi and take note of its IP address printed in the startup text scroll
 
-## customization
+#### 7) customization
 
-changes to make to make this your own
+use another computer on your network to visit the following web addresses
+where <pi-ip> is the ip address you noted from the startup text scroll
+`<pi-ip>:8080/edit` editor for cards and messages
+(future feature)
+`<pi-ip>:8080/config` editor for configs.json
 
-#### message templates
-
-use html/templates/calendar.html as a basis for editing and creating new message templates
-
-#### cards.json and messages.json
-
-access /edit from another computer to register new cards and messages to your system
-
-(if using docker make sure to have a volume link for these files or you will loose then betwen docker reboots)
-
-#### monitor resolution
-
-in html/templates/base.html edit the css with the resolution of the monitor on your message board
-```css
-#main {
-		height: 1366px;
-		width: 768px;
-		background-color: black;
-		text-align: center;
-```

@@ -70,12 +70,14 @@
         <br>
           Message A:
           <select name="message_a">
+            <option value="None">None</option>
             {% for key in messagesdict.keys() %}
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}
           </select>
           Message B:
           <select name="message_b">
+            <option value="None">None</option>
             {% for key in messagesdict.keys() %}
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}

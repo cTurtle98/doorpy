@@ -1,8 +1,10 @@
 """
-Ciaran Farley
-doorpy
+doorpy by Ciaran Farley
+https://github.com/cTurtle98/doorpy
 
-this program uses python flask to host the sign on my door
+program to host a web server with python flask
+web server is for a message board system for a bedroom door
+
 """
 
 from flask import Flask, render_template, request, redirect

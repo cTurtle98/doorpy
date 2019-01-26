@@ -144,6 +144,7 @@ def config() :
 @app.route('/config', methods=['POST'])
 def configpost():
     
+    return redirect('/config')
 
 if __name__ == '__main__' :
     app.run(

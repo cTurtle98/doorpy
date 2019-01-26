@@ -1,13 +1,13 @@
 {
     "default": {
         "messageSubject": "Scan Card",
-        "template": "basicmessage.html",
+        "template": "basemessage.html",
         "messageStatus": "Please scan a card to display a message!",
         "messageType": "do-not-disturb"
     },
     "cardnotfound": {
         "messageSubject": "Card Not Found",
-        "template": "basicmessage.html",
+        "template": "basemessage.html",
         "messageStatus": "That card does not exist in my database, please scan another",
         "messageType": "do-not-disturb"
     }

@@ -80,7 +80,7 @@ def edit() :
         'pages/edit.j2',
         cardsdict=cardsdict,
         messagesdict=messagesdict,
-        templateList=os.listdir('templates/'),
+        templateList=os.listdir('templates/').remove('pages'),
     )
 
 @app.route('/editcard', methods=['POST'])
@@ -143,6 +143,9 @@ def config() :
 
 @app.route('/config', methods=['POST'])
 def configpost():
+    
+    configsdict = {
+    }
     
     return redirect('/config')
 

@@ -1,6 +1,18 @@
 # doorpy
 python flask based web server for message board mounted to my door
 
+## Features
+
+sets up pi with just enough gui for chromium in fullscreen kiosk mode
+
+runs a web server built with python flask for gerating the messages
+
+scan any card on any HID device type card reader to register it into your cards list
+
+on another computer visit `<pi-IP>:8080/edit` to use my editor for the cards and messages
+
+customize messages and add more message templates for more html than you want in the json
+
 ## setup
 
 #### 1) Raspbian

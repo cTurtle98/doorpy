@@ -56,24 +56,24 @@ pip3 install Flask
 sep
 
 echo "CHANGING OPENBOX CONFIG FOR X11 SETTINGS WE NEED"
-sudo cp --backup[existing] configs/openbox-config /etc/xdg/openbox/autostart
+sudo cp --backup[existing] resources/openbox-config /etc/xdg/openbox/autostart
 
 sep
 
 echo "adding startup script to .bash_profile"
-cp --backup[existing] $HOME/doorpy/configs/startup.sh $HOME/.bash_profile
+cp --backup[existing] $HOME/doorpy/resources/startup.sh $HOME/.bash_profile
 
 sep
 
 echo "MONITOR SETTINGS CHANGE"
 
-sudo cp --backup[existing] $HOME/doorpy/configs/bootconfig /boot/config.txt
+sudo cp --backup[existing] $HOME/doorpy/resources/bootconfig /boot/config.txt
 
 sep
 
 echo "CHANGE MOTD"
 
-sudo cp --backup[existing] $HOME/doorpy/configs/motd /etc/motd
+sudo cp --backup[existing] $HOME/doorpy/resources/motd /etc/motd
 
 sep
 

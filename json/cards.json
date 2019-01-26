@@ -1,12 +1,8 @@
 {
-    "0005150671": {
-        "active": "A",
-        "B": "away",
-        "A": "home"
-    },
     "default": {
         "active": "A",
-        "B": "away",
-        "A": "away"
+        "B": "default",
+        "A": "default",
+        "nickname": "boot messages"
     }
 }

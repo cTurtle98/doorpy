@@ -83,6 +83,7 @@ def editcard() :
     ''' takes post request with form values from /edit and saves them to the dict then pushes them to the json files'''
     
     cardsdict[request.form.get('cardnum')] = {
+        "nickname" : request.form.get('nickname'),
         "A" :  request.form.get('message_a'),
         "B" :  request.form.get('message_b'),
         "active" : "A"

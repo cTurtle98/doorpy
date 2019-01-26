@@ -1,3 +1,6 @@
+#doorpy by Ciaran Farley
+#https://github.com/cTurtle98/doorpy
+
 # Disable any form of screen saver / screen blanking / power management
 xset s off
 xset s noblank

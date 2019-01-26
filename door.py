@@ -80,7 +80,7 @@ def edit() :
         'pages/edit.j2',
         cardsdict=cardsdict,
         messagesdict=messagesdict,
-        templateList=os.listdir('templates/').remove('pages'),
+        templateList=(os.listdir('templates/')).remove('pages'),
     )
 
 @app.route('/editcard', methods=['POST'])

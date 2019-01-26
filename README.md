@@ -73,8 +73,11 @@ reboot your pi and take note of its IP address printed in the startup text scrol
 #### 7) customization
 
 use another computer on your network to visit the following web addresses
-where <pi-ip> is the ip address you noted from the startup text scroll
+
+<pi-ip> is the ip address you noted from the startup text scroll
+
 `<pi-ip>:8080/edit` editor for cards and messages
+
 (future feature)
 `<pi-ip>:8080/config` editor for configs.json
 

@@ -11,11 +11,18 @@ import os
 import subprocess
 
 # setup dictionaries
+configsdict = {}
 cardsdict = {}
 messagesdict = {}
 
-
-def load_json_to_dict():
+def load_json_to_dict():\
+    # load configs json into dictionary for runtime use
+    try:
+        f = open("configs.json")
+        configsdict = json.load(f)
+        f.close
+    except:
+        print("ERROR! Could not load configs dictionary!")
     # load cards json into dictionary for runtime use
     try:
         f = open("json/cards.json")
@@ -65,12 +72,10 @@ def index() :
     
 @app.route('/edit', methods=['GET'])
 def edit() :
-    ''' remote edit page for messages and cards'''
-    
-    
+    ''' remote edit page for messages and cards'''    
     
     return render_template(
-        'pages/edit.html',
+        'pages/edit.j2',
         cardsdict=cardsdict,
         messagesdict=messagesdict,
         templateList=os.listdir('templates/'),
@@ -126,6 +131,17 @@ def reload() :
     
     return redirect('/edit')
 
+@app.route('/config', methods=['GET'])
+def config() :
+    ''' config editor page '''
+    return render_template(
+        'pages/config.j2',
+        configsdict = configsdict
+    )
+
+@app.route('/config', methods=['POST'])
+def configpost():
+    
 
 if __name__ == '__main__' :
     app.run(

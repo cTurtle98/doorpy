@@ -1,34 +1,12 @@
 #!/bin/bash
-#Ciaran Farley
-# doorpy setup script
-# commands to modify a fresh install of raspbian Lite for use with doorpy
+
+#doorpy by Ciaran Farley
+#https://github.com/cTurtle98/doorpy
+# script to setup doorpy on a fresh install of raspbian lite
 
 sep () {
   printf '#'%.0s {1..98} ; echo
 }
-
-sep
-sep
-echo "WARNING THIS SCRIPT CHANGES SYSTEM FILES TO ONLY HAVE MY CONFIGURATIONS"
-echo
-echo """
-IF YOU HAME MODIFIED YOUR SYSTEM FILES
-they will be renamed as backups and you can copy your changes into my new files after this script compleyes
-"""
-echo
-echo """
-FILES I AM REPLACING:
-/etc/xdg/openbox/autostart
-$HOME/.bash_profile
-/boot/config.txt
-/etc/motd
-"""
-echo
-echo "HIT CTRL+C TO QUIT OR ENTER TO CONTINUE"
-read
-printf "CONTINUING"
-for i in {1..5}; do sleep 1; printf " ."; done; echo
-echo
 
 sep
 

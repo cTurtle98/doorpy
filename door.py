@@ -77,7 +77,7 @@ def edit() :
     ''' remote edit page for messages and cards'''    
     
     templateList = os.listdir('templates/')
-    templateList = templateList.remove('pages')
+    templateList.remove('pages')
     
     return render_template(
         'pages/edit.j2',

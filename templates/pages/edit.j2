@@ -70,12 +70,14 @@
         <br>
           Message A:
           <select name="message_a">
+            <option value=""></option>
             {% for key in messagesdict.keys() %}
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}
           </select>
           Message B:
           <select name="message_b">
+            <option value=""></option>
             {% for key in messagesdict.keys() %}
             <option value="{{ key }}">{{ key }}</option>
             {% endfor %}
@@ -126,12 +128,14 @@
         </datalist>
         Template:
         <select name="messageTemplate">
+          <option value=""></option>
           {% for template in templateList %}
           <option value="{{ template }}">{{ template }}</option>
           {% endfor %}
         </select>
         messageType:
         <select name="messageType">
+          <option value=""></option>
           <option value="home">home</option>
           <option value="away">away</option>
           <option value="do-not-disturb">do-not-disturb</option>

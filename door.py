@@ -112,12 +112,20 @@ def editcard() :
 def editmessage() :
     ''' takes post request with form values from /edit and saves them to the dict then pushes them to the json files'''
     
-    messagesdict[request.form.get('messageName')] = {
-        "template" : request.form.get('messageTemplate'),
-        "messageType" : request.form.get('messageType'),
-        "messageSubject" : request.form.get('messageSubject'),
-        "messageStatus" : request.form.get('messageStatus')
-    }
+    messagename = request.form.get('messageName')
+    
+    if request.form.get('messageTemplate') != None
+        messagesdict[messagename]["template"] = request.form.get('messageTemplate')
+    
+    if request.form.get('messageType') != None
+        messagesdict[messagename]["messageType"] = request.form.get('messageType')
+    
+    if request.form.get('messageSubject') != None
+        messagesdict[messagename]["messageSubject"] = request.form.get('messageSubject')
+    
+    if request.form.get('messageStatus') != None
+        messagesdict[messagename]["messageStatus"] = request.form.get('messageStatus')
+    
     
     with open('json/messages.json', 'w') as f:
         json.dump(messagesdict, f, indent=4)

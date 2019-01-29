@@ -90,12 +90,18 @@ def edit() :
 def editcard() :
     ''' takes post request with form values from /edit and saves them to the dict then pushes them to the json files'''
     
-    cardsdict[request.form.get('cardnum')] = {
-        "nickname" : request.form.get('nickname'),
-        "A" :  request.form.get('message_a'),
-        "B" :  request.form.get('message_b'),
-        "active" : "A"
-    }
+    cardnum = request.form.get('cardnum')
+    
+    if request.form.get('nickname') != None:
+        cardsdict[cardnum]["nickname"] = request.form.get('nickname')
+        
+    if request.form.get('message_a') != None:
+        cardsdict[cardnum]["A"] = request.form.get('message_a')
+    
+    if request.form.get('message_b') != None:
+        cardsdict[cardnum]["B"] = request.form.get('message_b')
+    
+    cardsdict[cardnum]["active"] = "A"
     
     with open('json/cards.json', 'w') as f:
         json.dump(cardsdict, f, indent=4)
@@ -106,12 +112,20 @@ def editcard() :
 def editmessage() :
     ''' takes post request with form values from /edit and saves them to the dict then pushes them to the json files'''
     
-    messagesdict[request.form.get('messageName')] = {
-        "template" : request.form.get('messageTemplate'),
-        "messageType" : request.form.get('messageType'),
-        "messageSubject" : request.form.get('messageSubject'),
-        "messageStatus" : request.form.get('messageStatus')
-    }
+    messagename = request.form.get('messageName')
+    
+    if request.form.get('messageTemplate') != None
+        messagesdict[messagename]["template"] = request.form.get('messageTemplate')
+    
+    if request.form.get('messageType') != None
+        messagesdict[messagename]["messageType"] = request.form.get('messageType')
+    
+    if request.form.get('messageSubject') != None
+        messagesdict[messagename]["messageSubject"] = request.form.get('messageSubject')
+    
+    if request.form.get('messageStatus') != None
+        messagesdict[messagename]["messageStatus"] = request.form.get('messageStatus')
+    
     
     with open('json/messages.json', 'w') as f:
         json.dump(messagesdict, f, indent=4)

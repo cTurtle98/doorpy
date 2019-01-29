@@ -93,14 +93,15 @@ def editcard() :
     cardnum = request.form.get('cardnum')
     
     if request.form.get('nickname') != None:
+        cardsdict[cardnum]["nickname"] = request.form.get('nickname')
         
+    if request.form.get('message_a') != None:
+        cardsdict[cardnum]["A"] = request.form.get('message_a')
     
-    cardsdict[cardnum] = {
-        "nickname" : ,
-        "A" :  request.form.get('message_a'),
-        "B" :  request.form.get('message_b'),
-        "active" : "A"
-    }
+    if request.form.get('message_b') != None:
+        cardsdict[cardnum]["B"] = request.form.get('message_b')
+    
+    cardsdict[cardnum]["active"] = "A"
     
     with open('json/cards.json', 'w') as f:
         json.dump(cardsdict, f, indent=4)

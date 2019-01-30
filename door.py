@@ -114,16 +114,16 @@ def editmessage() :
     
     messagename = request.form.get('messageName')
     
-    if request.form.get('messageTemplate') != None
+    if request.form.get('messageTemplate') != None:
         messagesdict[messagename]["template"] = request.form.get('messageTemplate')
     
-    if request.form.get('messageType') != None
+    if request.form.get('messageType') != None:
         messagesdict[messagename]["messageType"] = request.form.get('messageType')
     
-    if request.form.get('messageSubject') != None
+    if request.form.get('messageSubject') != None:
         messagesdict[messagename]["messageSubject"] = request.form.get('messageSubject')
     
-    if request.form.get('messageStatus') != None
+    if request.form.get('messageStatus') != None:
         messagesdict[messagename]["messageStatus"] = request.form.get('messageStatus')
     
     

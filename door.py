@@ -80,7 +80,7 @@ def edit() :
     templateList.remove('pages')
     
     return render_template(
-        'pages/edit.j2',
+        'pages/edit.jinja2',
         cardsdict=cardsdict,
         messagesdict=messagesdict,
         templateList=templateList,
@@ -154,7 +154,7 @@ def reload() :
 def config() :
     ''' config editor page '''
     return render_template(
-        'pages/config.j2',
+        'pages/config.jinja2',
         configsdict = configsdict
     )
 

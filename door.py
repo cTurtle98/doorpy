@@ -31,7 +31,13 @@ def load_json_to_dict():\
         cardsdict = json.load(f)
         f.close
     except:
-        print("ERROR! Could not load cards dictionary!")
+        try:
+            print("custom cards not found, attempting to load default-cards")
+            f = open("json/default-cards.json")
+            cardsdict = json.load(f)
+            f.close
+        except:
+            print ("default cards not found please git pull to download them")
     
     # load messages json into dictionary for runtime use
     try:
@@ -39,7 +45,13 @@ def load_json_to_dict():\
         messagesdict = json.load(f)
         f.close()
     except:
-        print("ERROR! Could not load messages dictionary!")
+        try:
+            print("custom messages not found, attempting to load default-messages")
+            f = open("json/default-messages.json")
+            cardsdict = json.load(f)
+            f.close
+        except:
+            print ("default messages not found please git pull to download them")
     
     return cardsdict, messagesdict
 

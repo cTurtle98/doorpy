@@ -10,6 +10,24 @@ sep () {
 
 sep
 
+echo "changing locale and keyboard to US"
+locale=en_US.UTF-8
+layout=us
+sudo raspi-config nonint do_change_locale $locale
+sudo raspi-config nonint do_configure_keyboard $layout
+
+sep
+
+echo "enabling ssh"
+sudo raspi-config nonint do_ssh 0
+
+sep
+
+echo "enable autologin cli"
+sudo raspi-config nonint do_boot_behaviour B2
+
+sep
+
 echo "UPDATING DEFAULT INSTALLED PACKAGES"
 sudo apt-get update
 sudo apt-get -y upgrade

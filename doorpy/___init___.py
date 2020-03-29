@@ -1,6 +1,0 @@
-'''
-
-doorpy init file
-
-
-'''

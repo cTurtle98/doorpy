@@ -29,40 +29,39 @@ from doorpy import cardsdict
 from doorpy import messagesdict
 from doorpy import configsdict
 
-def load_json_to_dict():
-  # load configs json into dictionary for runtime use
+
+try:
+  f = open("configs.json")
+  configsdict = json.load(f)
+  f.close
+except:
+  print("ERROR! Could not load configs dictionary!")
+# load cards json into dictionary for runtime use
+try:
+  f = open("json/cards.json")
+  cardsdict = json.load(f)
+  f.close
+except:
   try:
-    f = open("configs.json")
-    configsdict = json.load(f)
-    f.close
-  except:
-    print("ERROR! Could not load configs dictionary!")
-  # load cards json into dictionary for runtime use
-  try:
-    f = open("json/cards.json")
+    print("custom cards not found, attempting to load default-cards")
+    f = open("json/default-cards.json")
     cardsdict = json.load(f)
     f.close
   except:
-    try:
-      print("custom cards not found, attempting to load default-cards")
-      f = open("json/default-cards.json")
-      cardsdict = json.load(f)
-      f.close
-    except:
-      print ("default cards not found please git pull to download them")
+    print ("default cards not found please git pull to download them")
     
-  # load messages json into dictionary for runtime use
+# load messages json into dictionary for runtime use
+try:
+  f = open("json/messages.json")
+  messagesdict = json.load(f)
+  f.close()
+except:
   try:
-    f = open("json/messages.json")
-    messagesdict = json.load(f)
-    f.close()
+    print("custom messages not found, attempting to load default-messages")
+    f = open("json/default-messages.json")
+    cardsdict = json.load(f)
+    f.close
   except:
-    try:
-      print("custom messages not found, attempting to load default-messages")
-      f = open("json/default-messages.json")
-      cardsdict = json.load(f)
-      f.close
-    except:
-      print ("default messages not found please git pull to download them")
+    print ("default messages not found please git pull to download them")
     
   return cardsdict, messagesdict

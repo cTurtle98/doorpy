@@ -39,13 +39,16 @@ from doorpy import load_json_to_dict
 cardsdict, messagesdict = load_json_to_dict()
         
 # setup the flask enviroment
-app = Flask(__name__, template_folder='templates/')
+def create_app():
+  app = Flask(__name__, template_folder='templates/')
 
-import doorpy.door
-import doorpy.edit
+  import doorpy.door
+  import doorpy.edit
 
-import doorpy.editcard
-import doorpy.editmessage
+  import doorpy.editcard
+  import doorpy.editmessage
+  
+  return app
 
 """
 @app.route('/gitpush', methods=['POST'])
@@ -55,7 +58,7 @@ def gitpush() :
     
     return abort(500)
 
-"""
+
 @app.route('/reload', methods=['POST'])
 def reload() :
     
@@ -80,11 +83,4 @@ def configpost():
     }
     
     return redirect('/config')
-
-if __name__ == '__main__' :
-    app.run(
-        # WARNING FLASK IS IN DEBUG MODE DISABLE FOR PRODUCTION SERVER
-        debug=True,
-        host='::',
-        port=8080
-    )
+"""

@@ -25,6 +25,7 @@ init file to setup flask enviroment and global variables
 from flask import Flask, render_template, request, redirect
 import os
 import subprocess
+import sys
 
 # setup dictionaries
 configsdict = {}

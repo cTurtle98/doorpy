@@ -22,6 +22,13 @@ helper function to load in the dictionaries
 
 """
 
+import json
+
+#import dictionaries
+from doorpy import cardsdict
+from doorpy import messagesdict
+from doorpy import configsdict
+
 def load_json_to_dict():
   # load configs json into dictionary for runtime use
   try:

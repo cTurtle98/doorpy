@@ -29,7 +29,7 @@ from doorpy import cardsdict
 from doorpy import messagesdict
 from doorpy import configsdict
 
-def load_json_to_dict():
+def main():
   # load configs json into dictionary for runtime use
   try:
     f = open("configs.json")

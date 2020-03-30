@@ -33,7 +33,7 @@ cardsdict = {}
 messagesdict = {}
 
 # import json dictionary loader
-import load_json_to_dict.load_json_to_dict
+import doorpy.load_json_to_dict.load_json_to_dict
 
 #load dictionaries
 cardsdict, messagesdict = load_json_to_dict()

@@ -28,9 +28,9 @@ import subprocess
 import sys
 
 # setup dictionaries
-configsdict = {}
-cardsdict = {}
-messagesdict = {}
+global configsdict = {}
+global cardsdict = {}
+global messagesdict = {}
 
 # import json dictionary loader
 from doorpy import load_json_to_dict

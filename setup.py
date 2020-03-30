@@ -83,6 +83,8 @@ setup(
     # only runs on linux
     'Operating System :: POSIX :: Linux',
   ].
-  install_requires=['Flask'],
+  install_requires=[
+    'flask',
+  ],
 )
 

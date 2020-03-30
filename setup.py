@@ -33,6 +33,9 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
   name='doorpy',
   
+  packages=['doorpy'],
+  include_package_data=True,
+  
   # VERSIONING SCHEMA
   # X.0.0 Major Release breaks compatability
   # 0.X.0 Minor release continues compatibility

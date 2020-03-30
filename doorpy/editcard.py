@@ -23,6 +23,7 @@ serverside handler for card editing
 """
 
 from flask import request, redirect
+import json
 
 #import flask enviroment
 from doorpy import app

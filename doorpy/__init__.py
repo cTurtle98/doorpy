@@ -33,10 +33,10 @@ cardsdict = {}
 messagesdict = {}
 
 # import json dictionary loader
-import doorpy.load_json_to_dict.load_json_to_dict
+from doorpy import load_json_to_dict
 
 #load dictionaries
-cardsdict, messagesdict = load_json_to_dict()
+cardsdict, messagesdict = load_json_to_dict.load_json_to_dict()
         
 # setup the flask enviroment
 app = Flask(__name__, template_folder='templates/')

@@ -40,12 +40,11 @@ cardsdict, messagesdict = load_json_to_dict()
 # setup the flask enviroment
 app = Flask(__name__, template_folder='templates/')
 
-from doorpy import door
-from doorpy import edit
+import doorpy.door
+import doorpy.edit
 
-from doorpy import editcard
-
-from doorpy import editmessage
+import doorpy.editcard
+import doorpy.editmessage
 
 """
 @app.route('/gitpush', methods=['POST'])

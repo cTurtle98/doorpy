@@ -88,4 +88,3 @@ if __name__ == '__main__' :
         host='::',
         port=8080
     )
-return app

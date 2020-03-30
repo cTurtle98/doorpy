@@ -52,8 +52,8 @@ setup(
   url='https://github.com/cTurtle98/doorpy',
   
   # project author details
-  author='Ciaran Farley'
-  author_email='ciaran@cturtle98.com'
+  author='Ciaran Farley',
+  author_email='ciaran@cturtle98.com',
   
   classifiers=[
     
